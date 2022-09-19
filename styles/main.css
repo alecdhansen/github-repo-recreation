@@ -9,26 +9,62 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
+/* line color variable #22262C */
 
 body {
   background-color: #0e1116;
+}
+a {
+  text-decoration: none;
+  color: #cad1d8;
+}
+a:hover {
+  color: #6ba4f8;
 }
 header {
   height: 60px;
   width: 100vw;
   background-color: #181b21;
+  display: flex;
+  align-items: center;
+}
+.search-plus-right-side {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.search {
+  display: flex;
+}
+.search-links {
+  display: flex;
+}
+.search-links > a {
+  text-decoration: none;
+  color: #e7ecf1;
+}
+.right-side-header {
+  display: flex;
+  color: #e7ecf1;
+}
+.right-side-links {
+  text-decoration: none;
+  color: #e7ecf1;
 }
 .sticky-bar {
   height: 70px;
   width: 100vw;
   position: sticky;
   background-color: #0e1116;
+  top: 0;
+  border-bottom: 1px solid #22262c;
+  z-index: 40;
 }
 .profile-nav {
   display: flex;
   align-items: flex-end;
   bottom: 0%;
-  height: 100%;
+  height: 80%;
   margin-left: 30%;
   margin-bottom: 0;
   padding: 0;
@@ -36,8 +72,7 @@ header {
 .profile-nav-links {
   text-decoration: none;
   padding: 0 15px;
-  padding-bottom: 10px;
-  color: #cad1d8;
+  /* padding-bottom: 10px; */
   cursor: pointer;
   font-size: 14px;
 }
@@ -47,17 +82,70 @@ header {
   color: #cad1d8;
 }
 .repo {
-  border-bottom: 3px solid #e8876d;
+  border-bottom: 1px solid #e8876d;
   padding-bottom: 7px;
+  /* margin-top: 50px; */
 }
+.profile-img-conainter {
+  width: 100%;
+}
+.profile-img-container > img {
+  border-radius: 50%;
+  width: 100%;
+  z-index: 50;
+}
+.names {
+  display: flex;
+  flex-direction: column;
+}
+.follower-info-links {
+  display: flex;
+}
+.follower-info {
+  display: flex;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  color: #cad1d8;
+}
+
 .container-xl {
   width: 90%;
+  padding: 0;
+  display: flex;
 }
 .layout-sidebar {
-  width: 30%;
+  width: 23%;
   left: 0;
+  padding: 0;
 }
 .layout-main {
   width: 60%;
   right: 0;
+}
+footer {
+  width: 92%;
+  height: 115px;
+  border-top: 1px solid #22262c;
+  margin-left: 72px;
+  display: flex;
+  align-items: center;
+}
+.copywrite {
+  color: #8d949d;
+  font-size: 12px;
+}
+.footer-link-list {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  font-size: 12px;
+}
+.footer-links {
+  margin: 0 18px;
+  color: #6ba4f8;
+}
+.footer-links:hover {
+  text-decoration: underline;
 }

@@ -18,14 +18,45 @@
     <title>Github Repo Recreation</title>
   </head>
   <body>
-    <header class="js-header-wrapper">
+    <header>
       <div>
         <a href="#"><i class="fa-brands fa-github"></i></a>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="search-plus-right-side">
+        <div class="search">
+          <input data="text" />
+          <div class="search-links">
+            <a href="#">Pull requests</a>
+            <a href="#">Issues</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Explore</a>
+          </div>
+        </div>
+        <div class="right-side-header">
+          <div>
+            <a class="right-side-links" href="#"
+              ><i class="fa-regular fa-bell"></i
+            ></a>
+          </div>
+          <div>
+            <a class="right-side-links" href="#"
+              ><i class="fa-solid fa-plus"></i
+            ></a>
+            <a class="right-side-links" href="#"
+              ><i class="fa-solid fa-sort-down"></i
+            ></a>
+          </div>
+          <div>
+            <div>
+              <a class="right-side-links" href="#"><img /></a>
+              <span></span>
+              <a class="right-side-links" href="#"
+                ><i class="fa-solid fa-sort-down"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <div class="sticky-bar">
@@ -49,9 +80,34 @@
       </div>
       <div class="container-xl">
         <aside class="layout-sidebar">
-          <div><img /></div>
-          <section>names</section>
-          <section>info</section>
+          <div class="profile-img-container">
+            <img src="./images/profile.png" />
+          </div>
+          <div class="names">
+            <span>Alec Hansen</span>
+            <span>Alec Hansen</span>
+          </div>
+          <div class="profile-info">
+            <div>Student at Carolina Code School</div>
+            <button>Edit Profile</button>
+            <div class="follower-info-links">
+              <a class="follower-info" href="#">
+                <i class="fa-solid fa-user-group"></i>
+                <span>1</span>
+                <div>follower</div>
+              </a>
+              <a class="follower-info" href="#">
+                <span>4</span>
+                <div>following</div>
+              </a>
+            </div>
+            <div class="contact-info">
+              <div>Carolina Code School</div>
+              <div>Greenville, South Carolina</div>
+              <a href="#">alecdhansen@gmail.com</a>
+              <a href="www.linkedin.com">LinkedIn</a>
+            </div>
+          </div>
           <section>organization</section>
         </aside>
         <div class="layout-main">
@@ -87,20 +143,22 @@
       </div>
     </main>
     <footer>
-      <div><a href="#"><i class="fa-brands fa-github"></i> © 2022 GitHub, Inc.</div>
+      <div class="copywrite">
+        <i class="fa-brands fa-github"></i> © 2022 GitHub, Inc.
+      </div>
       <nav>
-        <ul>
-          <li>Terms</li>
-          <li>Privacy</li>
-          <li>Security</li>
-          <li>Status</li>
-          <li>Docs</li>
-          <li>Contact GitHub</li>
-          <li>Pricing</li>
-          <li>API</li>
-          <li>Training</li>
-          <li>Blog</li>
-          <li>About</li>
+        <ul class="footer-link-list">
+          <li><a class="footer-links" href="#">Terms</a></li>
+          <li><a class="footer-links" href="#">Privacy</a></li>
+          <li><a class="footer-links" href="#">Security</a></li>
+          <li><a class="footer-links" href="#">Status</a></li>
+          <li><a class="footer-links" href="#">Docs</a></li>
+          <li><a class="footer-links" href="#">Contact GitHub</a></li>
+          <li><a class="footer-links" href="#">Pricing</a></li>
+          <li><a class="footer-links" href="#">API</a></li>
+          <li><a class="footer-links" href="#">Training</a></li>
+          <li><a class="footer-links" href="#">Blog</a></li>
+          <li><a class="footer-links" href="#">About</a></li>
         </ul>
       </nav>
     </footer>
