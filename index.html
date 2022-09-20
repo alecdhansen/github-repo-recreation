@@ -20,11 +20,18 @@
   <body>
     <header>
       <div>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a class="github1" href="#"
+          ><i class="fa-brands fa-github github11"></i
+        ></a>
       </div>
       <div class="search-plus-right-side">
-        <div class="search">
-          <input data="text" />
+        <div class="search-header">
+          <input
+            class="form-control input-search1"
+            data="text"
+            type="search"
+            placeholder="Search or jump to..."
+          />
           <div class="search-links">
             <a href="#">Pull requests</a>
             <a href="#">Issues</a>
@@ -33,25 +40,20 @@
           </div>
         </div>
         <div class="right-side-header">
-          <div>
+          <a class="right-side-links" href="#"
+            ><i class="fa-regular fa-bell"></i
+          ></a>
+          <div class="plus-down">
             <a class="right-side-links" href="#"
-              ><i class="fa-regular fa-bell"></i
+              ><i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-sort-down"></i
             ></a>
           </div>
-          <div>
-            <a class="right-side-links" href="#"
-              ><i class="fa-solid fa-plus"></i
-            ></a>
-            <a class="right-side-links" href="#"
-              ><i class="fa-solid fa-sort-down"></i
-            ></a>
-          </div>
-          <div>
-            <div>
-              <a class="right-side-links" href="#"><img /></a>
-              <span></span>
+          <div class="avatar-container">
+            <div class="avatar">
               <a class="right-side-links" href="#"
-                ><i class="fa-solid fa-sort-down"></i
+                ><img src="./images/profile.png" />
+                <i class="fa-solid fa-sort-down"></i
               ></a>
             </div>
           </div>
@@ -81,7 +83,7 @@
       <div class="container-xl">
         <aside class="layout-sidebar">
           <div class="profile-img-container">
-            <img src="./images/profile.png" />
+            <a href="#"> <img src="./images/profile.png" /></a>
           </div>
           <div class="names">
             <span>Alec Hansen</span>
@@ -111,26 +113,59 @@
           <section>organization</section>
         </aside>
         <div class="layout-main">
-          <div class="search">
-            <div>searchbar</div>
-            <div>
-              <div>type</div>
-              <div>language</div>
-              <div>sort</div>
+          <div class="search-repo">
+            <input
+              class="form-control input-search2"
+              data="text"
+              type="search"
+              placeholder="Find a repository..."
+            />
+            <div class="sort-search">
+              <button class="repo-btns">
+                Type
+                <span><i class="fa-solid fa-sort-down"></i></span>
+              </button>
+              <button class="repo-btns">
+                Language
+                <span><i class="fa-solid fa-sort-down"></i></span>
+              </button>
+              <button class="repo-btns">
+                Sort
+                <span><i class="fa-solid fa-sort-down"></i></span>
+              </button>
             </div>
-            <div>new</div>
+            <button class="repo-btns green-btn">
+              <i class="fa-solid fa-book-bookmark"></i> New
+            </button>
           </div>
           <ul class="repository-list">
             <li class="repository-item">
               <div>
                 <h3>
-                  <a>js-calculator</a>
-                  <span>Public</span>
+                  <a href="#" class="repo-name">github-repo-recreation</a>
+                  <span class="public-private-label">Public</span>
                 </h3>
-                <div>
-                  <div>color circle</div>
-                  <div>JavaScript</div>
-                  <div>Updated 4 hours ago</div>
+                <div class="upload-timer">
+                  <span class="fa-solid fa-circle repo-language-color"></span>
+                  <div class="language-type">HTML</div>
+                  <div class="upload-timer-time">Updated 4 hours ago</div>
+                </div>
+              </div>
+              <div>
+                <button><i class="fa-regular fa-star"></i> Star</button>
+                <button><i class="fa-solid fa-sort-down"></i></button>
+              </div>
+            </li>
+            <li class="repository-item">
+              <div>
+                <h3>
+                  <a href="#" class="repo-name">js-calculator</a>
+                  <span class="public-private-label">Public</span>
+                </h3>
+                <div class="upload-timer">
+                  <span class="fa-solid fa-circle repo-language-color"></span>
+                  <div class="language-type">JavaScript</div>
+                  <div class="upload-timer-time">Updated 4 hours ago</div>
                 </div>
               </div>
               <div>
