@@ -194,10 +194,34 @@
               <a href="{{html_url}}" class="repo-name">{{name}}</a>
               <span class="public-private-label">{{visibility}}</span>
             </h3>
-            <!-- <span>{{forks_url}}</span> -->
+            {{#if description}}
+              <p class="readme-description">{{description}}</p>
+            {{/if}}
+            {{#if description}}
+              <div class="configs">
+                {{#each topics}}
+                  <div></div>
+                  <div></div>
+                {{/each}}
+              </div>
+            {{/if}}
+            {{#if fork}}
+              <p class="fork">Forked from
+                <a href="{{forks_url}}" class="fork">
+                  this user</a></p>
+            {{/if}}
             <div class="upload-timer">
-              <span class="fa-solid fa-circle repo-language-color"></span>
+              {{#if language}}
+                <span
+                  class="fa-solid fa-circle repo-language-color {{language}}"
+                ></span>
+              {{/if}}
               <div class="language-type">{{language}}</div>
+              {{#if fork}}
+                <a href="{{forks_url}}"><i
+                    class="fa-solid fa-code-fork forks"
+                  ></i></a>
+              {{/if}}
               <div class="upload-timer-time">Updated
                 {{updated_at}}</div>
             </div>

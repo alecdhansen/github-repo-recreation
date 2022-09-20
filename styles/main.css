@@ -1,3 +1,5 @@
+@import "language_colors.css";
+
 html {
   box-sizing: border-box;
 }
@@ -29,6 +31,15 @@ a:hover {
   margin: 0 10px;
   border: 1px solid #22262c;
   font-size: 14px;
+}
+.input-search1:focus {
+  background-color: #0e1116;
+  color: #cad1d8;
+}
+.input-search2:focus {
+  background-color: #0e1116;
+  outline: none;
+  color: #cad1d8;
 }
 .input-search2 {
   background-color: #0e1116;
@@ -324,9 +335,9 @@ header {
 .upload-timer {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 .repo-language-color {
-  color: #e34c26;
   font-size: 12px;
   margin-right: 4px;
 }
@@ -334,6 +345,20 @@ header {
   color: #8b9493;
   font-size: 12px;
   margin-right: 20px;
+}
+.fork {
+  color: #8b9493;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.forks {
+  color: #8b9493;
+  font-size: 12px;
+  margin-right: 12px;
+}
+.readme-description {
+  color: #8b9493;
+  font-size: 14px;
 }
 .upload-timer-time {
   color: #8b9493;
@@ -432,4 +457,6 @@ footer {
 }
 .footer-links:hover {
   text-decoration: underline;
+}
+.readme-description {
 }
