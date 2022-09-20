@@ -82,51 +82,9 @@
       </div>
       <div class="container-xl">
         <aside class="layout-sidebar">
-          <div class="profile-img-container">
-            <a href="#"> <img src="./images/profile.png" /></a>
-          </div>
-          <div class="names">
-            <div class="big-name">Alec Hansen</div>
-            <div class="small-name">alecdhansen</div>
-          </div>
-          <div class="profile-info">
-            <div class="bio-blurb">Student at Carolina Code School</div>
-            <button>Edit Profile</button>
-            <div class="follower-info-links">
-              <a class="follower-info" href="#">
-                <i class="fa-solid fa-user-group"></i>
-                <span>1 </span>
-                <div>follower</div>
-              </a>
-              <a class="follower-info" href="#">
-                <span>4 </span>
-                <div>following</div>
-              </a>
-            </div>
-            <div class="contact-info">
-              <div>
-                <i class="fa-solid fa-building"></i>Carolina Code School
-              </div>
-              <div>
-                <i class="fa-solid fa-location-dot"></i>Greenville, South
-                Carolina
-              </div>
-              <a href="#"
-                ><i class="fa-regular fa-envelope"></i>alecdhansen@gmail.com</a
-              >
-              <a href="www.linkedin.com"
-                ><i class="fa-solid fa-link"></i>LinkedIn</a
-              >
-            </div>
-          </div>
+          <div class="user-section"></div>
           <div class="organizations">Organizations</div>
-          <ul class="organization-avatars">
-            <li class="org-avatar-img-container">
-              <a href="https://github.com/ccs-summer-2022"
-                ><img src="./images/CCS.png"
-              /></a>
-            </li>
-          </ul>
+          <ul class="organization-avatars"></ul>
         </aside>
         <div class="layout-main">
           <div class="search-repo">
@@ -154,37 +112,7 @@
               <i class="fa-solid fa-book-bookmark"></i> New
             </button>
           </div>
-          <ul class="repository-list">
-            <script id="entry-template" type="text/x-handlebars-template">
-              {{#each repos}}
-                <li class="repository-item">
-                  <div>
-                    <h3>
-                      <a href="#" class="repo-name">{{name}}</a>
-                      <span class="public-private-label">{{visibility}}</span>
-                    </h3>
-                    <div class="upload-timer">
-                      <span
-                        class="fa-solid fa-circle repo-language-color"
-                      ></span>
-                      <div class="language-type">{{language}}</div>
-                      <div class="upload-timer-time">Updated
-                        {{updated_at}}</div>
-                    </div>
-                  </div>
-                  <div class="star-btns">
-                    <button class="star-btn1">
-                      <i class="fa-regular fa-star"></i>
-                      Star
-                    </button>
-                    <button class="star-btn2">
-                      <i class="fa-solid fa-sort-down"></i>
-                    </button>
-                  </div>
-                </li>
-              {{/each}}
-            </script>
-          </ul>
+          <ul class="repository-list"></ul>
         </div>
       </div>
     </main>
@@ -209,6 +137,84 @@
         </ul>
       </nav>
     </footer>
+
+    <!-- scripts -->
+
+    <script id="user-template" type="text/x-handlebars-template">
+      <div class="profile-img-container">
+        <a href="#">
+          <img src="{{avatar_url}}" /></a>
+      </div>
+      <div class="names">
+        <div class="big-name">{{name}}</div>
+        <div class="small-name">{{login}}</div>
+      </div>
+      <div class="profile-info">
+        <div class="bio-blurb">{{bio}}</div>
+        <button>Edit Profile</button>
+        <div class="follower-info-links">
+          <a class="follower-info" href="#">
+            <i class="fa-solid fa-user-group"></i>
+            <span>{{followers}} </span>
+            <div>follower</div>
+          </a>
+          <a class="follower-info" href="#">
+            <span>{{following}} </span>
+            <div>following</div>
+          </a>
+        </div>
+        <div class="contact-info">
+          <div>
+            <i class="fa-solid fa-building"></i>{{company}}
+          </div>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>{{location}}
+          </div>
+          <a href="#"><i
+              class="fa-regular fa-envelope"
+            ></i>alecdhansen@gmail.com</a>
+          <a href="{{blog}}"><i class="fa-solid fa-link"></i>{{blog}}</a>
+        </div>
+      </div>
+    </script>
+
+    <script id="orgs-template" type="text/x-handlebars-template">
+      {{#each orgs}}
+        <li class="org-avatar-img-container">
+          <a href="{{url}}"><img src="{{avatar_url}}" /></a>
+        </li>
+      {{/each}}
+    </script>
+
+    <script id="repo-template" type="text/x-handlebars-template">
+      {{#each repos}}
+        <li class="repository-item">
+          <div>
+            <h3>
+              <a href="{{html_url}}" class="repo-name">{{name}}</a>
+              <span class="public-private-label">{{visibility}}</span>
+            </h3>
+            <!-- <span>{{forks_url}}</span> -->
+            <div class="upload-timer">
+              <span class="fa-solid fa-circle repo-language-color"></span>
+              <div class="language-type">{{language}}</div>
+              <div class="upload-timer-time">Updated
+                {{updated_at}}</div>
+            </div>
+          </div>
+          <div class="star-btns">
+            <button class="star-btn1">
+              <i class="fa-regular fa-star"></i>
+              Star
+            </button>
+            <button class="star-btn2">
+              <i class="fa-solid fa-sort-down"></i>
+            </button>
+          </div>
+        </li>
+      {{/each}}
+    </script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
       integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="

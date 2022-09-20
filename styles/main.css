@@ -254,18 +254,18 @@ header {
 .organizations {
   font-size: 16px;
   color: #c9d1d9;
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 .organization-avatars {
   list-style-type: none;
   padding: 0;
 }
-.org-avatars-img-container {
+.org-avatar-img-container {
   width: 30px;
 }
-.org-avatars-img-container > a > img {
-  width: 100%;
-  border-radius: 5%;
+.org-avatar-img-container > a > img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 .search-header {
   width: 80%;
@@ -319,6 +319,7 @@ header {
   color: #8b949e;
   border: 1px solid #22262c;
   border-radius: 10px;
+  text-transform: capitalize;
 }
 .upload-timer {
   display: flex;
