@@ -359,6 +359,7 @@ header {
 .readme-description {
   color: #8b9493;
   font-size: 14px;
+  margin: 0;
 }
 .upload-timer-time {
   color: #8b9493;
@@ -402,7 +403,7 @@ header {
   color: #c9d1d9;
   background-color: #34393f;
 }
-.container-xl {
+.main-container {
   width: 85%;
   padding: 0;
   display: flex;
@@ -458,5 +459,14 @@ footer {
 .footer-links:hover {
   text-decoration: underline;
 }
-.readme-description {
+.configs {
+  display: flex;
+  margin: 8px 0px;
+}
+.configs > a {
+  color: #58a6ff;
+  background-color: #1d294a;
+  border-radius: 12px;
+  padding: 0px 10px;
+  font-size: 12px;
 }

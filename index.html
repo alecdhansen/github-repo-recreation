@@ -80,7 +80,7 @@
           >
         </div>
       </div>
-      <div class="container-xl">
+      <div class="main-container">
         <aside class="layout-sidebar">
           <div class="user-section"></div>
           <div class="organizations">Organizations</div>
@@ -200,8 +200,7 @@
             {{#if description}}
               <div class="configs">
                 {{#each topics}}
-                  <div></div>
-                  <div></div>
+                  <a href="#">{{this}}</a>
                 {{/each}}
               </div>
             {{/if}}
@@ -243,6 +242,10 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
       integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/main.js" type="module"></script>
