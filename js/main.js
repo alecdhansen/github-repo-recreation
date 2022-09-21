@@ -1,13 +1,8 @@
-// import reposContext from "./repos.js";
-import user from "./profile_info.js";
-import orgsContext from "./organizations.js";
 import apiKey from "./token.js";
 ("use strict");
 
-//--------//
-// const repos = {
-//   repos: json,
-// };
+//----REPOS----//
+
 function generateHTML(json) {
   const repoSource = document.getElementById("repo-template").innerHTML;
   const repoTemplate = Handlebars.compile(repoSource);
@@ -26,26 +21,44 @@ fetch(`https://api.github.com/users/alecdhansen/repos`, {
   .then((response) => response.json())
   .then((json) => generateHTML(json));
 
-//--------//
+//----USER----//
 
-const userSource = document.getElementById("user-template").innerHTML;
-const userTemplate = Handlebars.compile(userSource);
-const userHtml = userTemplate(user);
-// console.log(userHtml);
+function generateUserHTML(json) {
+  const userSource = document.getElementById("user-template").innerHTML;
+  const userTemplate = Handlebars.compile(userSource);
+  const userHtml = userTemplate(json);
+  console.log(json);
+  document
+    .querySelector(".user-section")
+    .insertAdjacentHTML("afterbegin", userHtml);
+}
 
-document
-  .querySelector(".user-section")
-  .insertAdjacentHTML("afterbegin", userHtml);
+fetch(`https://api.github.com/users/alecdhansen`, {
+  headers: {
+    Authorization: `token ${apiKey}`,
+  },
+})
+  .then((response) => response.json())
+  .then((json) => generateUserHTML(json));
 
-//--------//
+//----ORGS----//
 
-const orgsSource = document.getElementById("orgs-template").innerHTML;
-const orgsTemplate = Handlebars.compile(orgsSource);
-const orgsHtml = orgsTemplate(orgsContext);
-// console.log(orgsHtml);
+function generateOrgHTML(json) {
+  const orgSource = document.getElementById("orgs-template").innerHTML;
+  const orgTemplate = Handlebars.compile(orgSource);
+  const orgHtml = orgTemplate({ orgs: json });
+  console.log(json);
+  document
+    .querySelector(".organization-avatars")
+    .insertAdjacentHTML("afterbegin", orgHtml);
+}
 
-document
-  .querySelector(".organization-avatars")
-  .insertAdjacentHTML("afterbegin", orgsHtml);
+fetch(`https://api.github.com/users/alecdhansen/orgs`, {
+  headers: {
+    Authorization: `token ${apiKey}`,
+  },
+})
+  .then((response) => response.json())
+  .then((json) => generateOrgHTML(json));
 
 //--------//

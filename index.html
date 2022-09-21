@@ -61,32 +61,38 @@
       </div>
     </header>
     <main>
-      <div class="sticky-bar">
-        <div class="profile-nav">
-          <a class="profile-nav-links">
-            <i class="fa-solid fa-book-open"></i> Overview
-          </a>
-          <a class="profile-nav-links repo"
-            ><i class="fa-solid fa-book-bookmark"></i> Repositories</a
-          >
-          <a class="profile-nav-links"
-            ><i class="fa-regular fa-square"></i> Projects</a
-          >
-          <a class="profile-nav-links"
-            ><i class="fa-solid fa-cube"></i> Packages</a
-          >
-          <a class="profile-nav-links"
-            ><i class="fa-regular fa-star"></i> Stars</a
-          >
-        </div>
-      </div>
-      <div class="main-container">
+      <section class="sticky-bar">
+        <ul class="profile-nav">
+          <li class="profile-nav-links">
+            <a href="#"> <i class="fa-solid fa-book-open"></i> Overview </a>
+          </li>
+          <li class="profile-nav-links repo">
+            <a href="#"
+              ><i class="fa-solid fa-book-bookmark"></i> Repositories
+              <span class="repo-count-highlight"> 12</span></a
+            >
+          </li>
+          <li class="profile-nav-links">
+            <a href="#"><i class="fa-regular fa-square"></i> Projects</a>
+          </li>
+          <li class="profile-nav-links">
+            <a href="#"><i class="fa-solid fa-cube"></i> Packages</a>
+          </li>
+          <li class="profile-nav-links">
+            <a href="#"
+              ><i class="fa-regular fa-star"></i> Stars
+              <span class="repo-count-highlight"> 1</span></a
+            >
+          </li>
+        </ul>
+      </section>
+      <container class="main-container">
         <aside class="layout-sidebar">
           <div class="user-section"></div>
           <div class="organizations">Organizations</div>
           <ul class="organization-avatars"></ul>
         </aside>
-        <div class="layout-main">
+        <main class="layout-main">
           <div class="search-repo">
             <input
               class="form-control input-search2"
@@ -113,8 +119,8 @@
             </button>
           </div>
           <ul class="repository-list"></ul>
-        </div>
-      </div>
+        </main>
+      </container>
     </main>
     <footer>
       <div class="copywrite">
@@ -153,12 +159,12 @@
         <div class="bio-blurb">{{bio}}</div>
         <button>Edit Profile</button>
         <div class="follower-info-links">
-          <a class="follower-info" href="#">
+          <a class="follower-info" href="{{followers_url}}">
             <i class="fa-solid fa-user-group"></i>
             <span>{{followers}} </span>
-            <div>follower</div>
+            <div>followers</div>
           </a>
-          <a class="follower-info" href="#">
+          <a class="follower-info" href="{{following_url}}">
             <span>{{following}} </span>
             <div>following</div>
           </a>
