@@ -101,17 +101,30 @@
               placeholder="Find a repository..."
             />
             <div class="sort-search">
-              <button class="repo-btns">
+              <button class="repo-btns dropbtn">
                 Type
-                <span><i class="fa-solid fa-sort-down"></i></span>
+                <i class="fa-solid fa-sort-down"></i>
               </button>
+              <div id="dropdown-btn" class="dropdown-content">
+                <div class="dropdown-option select-type">Select type</div>
+                <a href="#" class="dropdown-option"
+                  ><i class="fa-solid fa-check"></i> All</a
+                >
+                <a href="#" class="dropdown-option">Public</a>
+                <a href="#" class="dropdown-option">Private</a>
+                <a href="#" class="dropdown-option">Sources</a>
+                <a href="#" class="dropdown-option">Forks</a>
+                <a href="#" class="dropdown-option">Archives</a>
+                <a href="#" class="dropdown-option">Mirrors</a>
+                <a href="#" class="dropdown-option">Templates</a>
+              </div>
               <button class="repo-btns">
                 Language
-                <span><i class="fa-solid fa-sort-down"></i></span>
+                <i class="fa-solid fa-sort-down"></i>
               </button>
-              <button class="repo-btns">
+              <button href="#" class="repo-btns">
                 Sort
-                <span><i class="fa-solid fa-sort-down"></i></span>
+                <i class="fa-solid fa-sort-down"></i>
               </button>
             </div>
             <button class="repo-btns green-btn">
