@@ -15,9 +15,9 @@ function generateHTML(json) {
 }
 
 fetch(`https://api.github.com/users/alecdhansen/repos`, {
-  headers: {
-    Authorization: `token ${apiKey}`,
-  },
+  // headers: {
+  //   Authorization: `token ${apiKey}`,
+  // },
 })
   .then((response) => response.json())
   .then((json) => generateHTML(json));
@@ -35,9 +35,9 @@ function generateUserHTML(json) {
 }
 
 fetch(`https://api.github.com/users/alecdhansen`, {
-  headers: {
-    Authorization: `token ${apiKey}`,
-  },
+  // headers: {
+  //   Authorization: `token ${apiKey}`,
+  // },
 })
   .then((response) => response.json())
   .then((json) => generateUserHTML(json));
@@ -55,9 +55,9 @@ function generateOrgHTML(json) {
 }
 
 fetch(`https://api.github.com/users/alecdhansen/orgs`, {
-  headers: {
-    Authorization: `token ${apiKey}`,
-  },
+  // headers: {
+  //   Authorization: `token ${apiKey}`,
+  // },
 })
   .then((response) => response.json())
   .then((json) => generateOrgHTML(json));
