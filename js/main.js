@@ -1,4 +1,4 @@
-import apiKey from "./token.js";
+// import apiKey from "./token.js";
 ("use strict");
 const button = document.querySelector(".dropbtn");
 
@@ -14,11 +14,7 @@ function generateHTML(json) {
     .insertAdjacentHTML("afterbegin", repoHtml);
 }
 
-fetch(`https://api.github.com/users/alecdhansen/repos`, {
-  // headers: {
-  //   Authorization: `token ${apiKey}`,
-  // },
-})
+fetch(`https://api.github.com/users/alecdhansen/repos`)
   .then((response) => response.json())
   .then((json) => generateHTML(json));
 
@@ -34,11 +30,7 @@ function generateUserHTML(json) {
     .insertAdjacentHTML("afterbegin", userHtml);
 }
 
-fetch(`https://api.github.com/users/alecdhansen`, {
-  // headers: {
-  //   Authorization: `token ${apiKey}`,
-  // },
-})
+fetch(`https://api.github.com/users/alecdhansen`)
   .then((response) => response.json())
   .then((json) => generateUserHTML(json));
 
@@ -54,11 +46,7 @@ function generateOrgHTML(json) {
     .insertAdjacentHTML("afterbegin", orgHtml);
 }
 
-fetch(`https://api.github.com/users/alecdhansen/orgs`, {
-  // headers: {
-  //   Authorization: `token ${apiKey}`,
-  // },
-})
+fetch(`https://api.github.com/users/alecdhansen/orgs`)
   .then((response) => response.json())
   .then((json) => generateOrgHTML(json));
 
